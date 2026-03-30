@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Check if the user provided an argument
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 <path_to_images>"
+  exit 1
+fi
+
+IMAGE="$1"
+
+# Send notification to the user
+notify-send "Changing Theme" "Applying new wallpaper and updating colors, please wait until confirmation..."
+
+# Set wallpaper
+awww img "$IMAGE" --transition-type="center" --transition-step=15 --transition-fps="144"

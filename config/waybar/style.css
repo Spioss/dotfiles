@@ -1,0 +1,95 @@
+@define-color bg1 #1a1e2a;
+@define-color bg2 #242D42;
+@define-color bg3 #212739;
+
+@define-color front #ffffff;
+
+@define-color blue #5eadfc;
+@define-color grey #6a6f87;
+@define-color pink #fa5ead;
+@define-color green #00fbad;
+
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-center {
+    background-color: @bg1;
+    padding: 2px 8px;
+    border-radius: 99px;
+}
+
+
+tooltip {
+    background: @bg1;
+    border: 1px solid @blue;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: #ffffff;
+    margin: 10px;
+}
+
+#workspaces {
+    background-color: transparent;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 4px 3px;
+    color: @grey;
+    background: transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background: @green;
+    color: #1e1e2e;
+    min-width: 2em;
+}
+
+
+#workspaces button.urgent {
+    background: @pink;
+    color: #1e1e2e;
+}
+
+#window {
+    margin: 6px 0;
+    padding: 0 14px;
+    background: #313244;
+    border-radius: 12px;
+    color: #cdd6f4;
+}
+
+
+
+#clock {
+    padding: 0 15px;
+    border-radius: 99px;
+    font-weight: 500;
+    font-size: 18;
+    color: @pink;
+}
+
+
+#pulseaudio{
+    margin: 6px -12px 6px 0;
+    padding: 0 14px;
+    background: transparent;
+    color: @green;
+}
+
+#network, #mpris {
+    margin: 6px 8px 6px 0;
+    padding: 0 14px;
+    background: transparent;
+    color: @pink;
+}

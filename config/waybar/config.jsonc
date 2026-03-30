@@ -1,0 +1,81 @@
+{
+  "spacing": 0,
+  "margin-top": 10,
+
+  //"modules-left": [], //"hyprland/window"],
+  "modules-center": ["clock", "hyprland/workspaces", "pulseaudio", "mpris"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      //"active": "",
+      //"default": " ",
+      //"empty": ""
+    },
+    "persistent-workspaces": {
+      "DP-1": [1, 2, 3, 4, 5]
+      //"HDMI-A-1": [6, 7, 8 ]
+    }
+  },
+
+  "mpris": {
+      "format": "{player_icon} {artist} - {title}",
+      "format-paused": " {artist} - {title}",
+      "player-icons": {
+          "spotify": "",
+          "firefox": ""
+      },
+      "max-length": 50
+  },
+
+  "hyprland/window": {
+    "max-length": 60,
+    "separate-outputs": true,
+    "rewrite": {
+      "": "Desktop"
+    }
+  },
+
+
+  "clock": {
+    "format": " {:%H:%M}", 
+    "format-alt": " {:%a, %d. %b  %H:%M}",
+    "tooltip-format": "<big>{:%A, %d. %B %Y}</big>\n<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right"
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "󰝟 mute",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "network": {
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "󰈀 ethernet",
+    "format-disconnected": "󰖪 offline",
+    "tooltip-format": "{ifname} via {gwaddr}"
+  }
+
+}
